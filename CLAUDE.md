@@ -181,9 +181,39 @@ claude-prompter suggest -t "LLM router for multi-model AI system" --code -l type
 - Load testing before production
 - AI accuracy benchmarking
 
+## Strategic Vision Documents
+
+### Plus Ultra Strategy Files
+- **[CLAUDE-STRATEGY.md](./CLAUDE-STRATEGY.md)** - Complete business strategy and market disruption plan
+- **[CLAUDE-MVP-FEATURES.md](./CLAUDE-MVP-FEATURES.md)** - 30-day MVP sprint with demo scenarios
+- **[CLAUDE-TECH-DIFFERENTIATION.md](./CLAUDE-TECH-DIFFERENTIATION.md)** - Technical superiority analysis vs Accela
+
+### Key Strategic Insights
+1. **AI-First Advantage**: We're not adding AI to permits, we're building permits on AI
+2. **10x Better UX**: 5-minute permits vs 45+ minutes in Accela
+3. **80% Cost Reduction**: SaaS model vs expensive licenses + infrastructure
+4. **Zero Training Required**: AI guides users through everything
+5. **Instant Accela Migration**: One-click data import preserves history
+
+### MVP Demo Highlights
+- Upload any document → Complete permit application
+- Natural language permit assistant
+- AI pre-review with instant feedback
+- Real-time collaboration features
+- Predictive analytics dashboard
+
+### Investment Thesis
+- **Market**: $2.3B government permitting software
+- **Problem**: 20-year-old monopoly (Accela) with terrible UX
+- **Solution**: AI-native platform with 10x better outcomes
+- **Traction**: Industry connections ready to pilot
+- **Ask**: $2M seed for 18-month runway to $10M ARR
+
 ## Remember for Next Session
 1. The project is in `/Users/kaiyakramer/permitagent/permitai/`
 2. Workspace protocol needs fixing in package.json files
 3. User is focused on building an MVP quickly
 4. Prioritize working features over perfect architecture
 5. User has domain expertise in government permitting
+6. Strategic documents created for investor pitch
+7. 30-day MVP plan ready to execute
