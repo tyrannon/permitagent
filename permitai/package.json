@@ -1,0 +1,14 @@
+{
+  "name": "permitai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Run npm install in individual packages for now'",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}

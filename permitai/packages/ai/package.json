@@ -1,0 +1,24 @@
+{
+  "name": "@permitai/ai",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src --ext .ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@permitai/core": "workspace:*",
+    "@anthropic-ai/sdk": "^0.10.0",
+    "openai": "^4.20.0",
+    "langchain": "^0.0.200",
+    "@pinecone-database/pinecone": "^1.1.0",
+    "ollama": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
