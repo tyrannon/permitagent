@@ -209,6 +209,46 @@ claude-prompter suggest -t "LLM router for multi-model AI system" --code -l type
 - **Traction**: Industry connections ready to pilot
 - **Ask**: $2M seed for 18-month runway to $10M ARR
 
+## Complete Requirements Documentation
+
+### All Permit Types Mapped
+- **Building**: 18 types (Residential/Non-Residential × 9 categories)
+- **Engineering**: EP Licensed/Major/Parklet, Encroachment, Lot Line
+- **Planning**: STR, Planning Records, Variances, CUPs
+- **Fire**: CUPA permits, Fire systems, Construction
+- **Parks & Rec**: Events, Film, Street Trees
+- **Code Enforcement**: Vacant buildings, Certificates, Cases
+- **Water**: Connections, Meters, Backflow
+
+### Key System Features
+1. **Project-Centric Architecture**: One project → multiple linked permits
+2. **Dynamic Fields**: Add custom fields without code changes
+3. **Workflow Undo**: Finally! Can undo workflow actions
+4. **Inspector Scheduling**: By STOPS not count (50 inspections at 1 address = 1 stop)
+5. **Finance ELI5 Mode**: Explains complex data to finance dept
+6. **PRA Engine**: Answer public records requests instantly
+7. **Certificate Generator**: Shiny certificates on demand
+8. **AI Everything**: Type detection, routing, scheduling, reporting
+
+### Pain Points We're Solving
+- Wrong permit types selected → AI suggests correct types
+- No workflow visibility → Visual workflow with predictions
+- Can't undo mistakes → Full history with undo
+- Finance 5PM panic → One-click emergency reports
+- Council demands new fields → Dynamic field creation
+- Scattered records → Everything linked to projects
+- Manual inspector routing → AI optimization by stops
+
+### Technical Decisions
+- **Database**: PostgreSQL with Prisma ORM
+- **Schema**: Flexible with JSONB for dynamic fields
+- **API**: Express + TypeScript
+- **Auth**: JWT with refresh tokens
+- **AI**: Multi-model (Claude, GPT-4V, Llama)
+- **Files**: MinIO for document storage
+- **Cache**: Redis for performance
+- **Search**: Pinecone for vector search
+
 ## Remember for Next Session
 1. The project is in `/Users/kaiyakramer/permitagent/permitai/`
 2. Workspace protocol needs fixing in package.json files
@@ -217,3 +257,9 @@ claude-prompter suggest -t "LLM router for multi-model AI system" --code -l type
 5. User has domain expertise in government permitting
 6. Strategic documents created for investor pitch
 7. 30-day MVP plan ready to execute
+8. All permit types and requirements documented
+9. Finance integration is CRITICAL (they panic at 5PM)
+10. Inspector scheduling must be by STOPS not inspections
+11. System must handle dynamic fields for council demands
+12. Everything must be undoable (workflow history)
+13. AI is at the CORE, not bolted on
