@@ -10,7 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@permitai/core": "workspace:*",
+    "tslib": "^2.6.2",
+    "@permitai/core": "^0.1.0",
     "@anthropic-ai/sdk": "^0.10.0",
     "openai": "^4.20.0",
     "langchain": "^0.0.200",

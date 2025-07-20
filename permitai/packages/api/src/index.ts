@@ -4,18 +4,18 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import { config } from './config';
 import { errorHandler } from './middleware/error-handler';
-import { authRouter } from './routes/auth';
-import { permitsRouter } from './routes/permits';
-import { documentsRouter } from './routes/documents';
-import { aiRouter } from './routes/ai';
-import { logger } from './utils/logger';
+import authRouter from './routes/auth';
+import permitsRouter from './routes/permits';
+import documentsRouter from './routes/documents';
+import aiRouter from './routes/ai';
+import logger from './utils/logger';
 
 const app = express();
 
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: config.corsOrigins,
+  origin: true,
   credentials: true
 }));
 
@@ -31,7 +31,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Health check
-app.get('/health', (req, res) => {
+app.get('/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 

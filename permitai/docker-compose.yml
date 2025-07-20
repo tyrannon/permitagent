@@ -45,6 +45,18 @@ services:
     volumes:
       - minio_data:/data
 
+  ocr-service:
+    build: ./infrastructure/ocr-service
+    ports:
+      - "8001:8001"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./infrastructure/ocr-service:/app
+    depends_on:
+      - redis
+    restart: unless-stopped
+
 volumes:
   postgres_data:
   redis_data:
