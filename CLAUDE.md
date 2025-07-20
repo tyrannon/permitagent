@@ -148,6 +148,24 @@ claude-prompter suggest -t "LLM router for multi-model AI system" --code -l type
 - Set complexity level (simple/moderate/complex) appropriately
 - Chain suggestions: Claude → Tool → GPT-4o → Claude
 
+### Active Usage Guidelines
+**IMPORTANT**: To get real AI suggestions (not templates), use:
+```bash
+# For actual GPT-4 responses, add --send flag
+claude-prompter prompt -m "How should I structure the permit database?" --send
+
+# Ask user before sending to manage costs
+# Example: "Should I use claude-prompter to get GPT-4's opinion on database design? (This will use API credits)"
+```
+
+**When to Use Actively**:
+- Starting new features → Get architecture suggestions
+- Solving complex problems → Get alternative approaches  
+- Code reviews → Get optimization ideas
+- Stuck on implementation → Get unstuck with fresh perspective
+
+**Always Ask First**: Before using `--send`, ask user to confirm API usage
+
 ## Key Decisions Made
 1. **Monorepo**: Using Turborepo for better code sharing
 2. **Database**: PostgreSQL with Prisma ORM for type safety
