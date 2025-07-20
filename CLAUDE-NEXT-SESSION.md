@@ -48,11 +48,30 @@ claude-prompter suggest -t "Express API with AI permit routing" --code -l typesc
 claude-prompter suggest -t "React permit creation form with AI assistance" --code -l react --task-type ui-component --claude-analysis
 ```
 
+## What's New Since Last Session
+- ✅ Complete permit types documented (all departments)
+- ✅ Migration engine designed (Database Eater)
+- ✅ Garbage data handling planned
+- ✅ Blame prevention system designed
+- ✅ Universal integrations mapped (GIS, financial, legacy)
+- ✅ Process visibility features added
+- ✅ Time prediction engine specified
+
 ## Remember
 - Project is at `/Users/kaiyakramer/permitagent/permitai/`
 - Use Docker Compose for dev environment
 - AI is core to everything - not an add-on
 - Focus on solving real pain points
 - Build for flexibility (council demands)
+- Migration engine is a KEY differentiator
+- Must handle blame scenarios
+- Connect to EVERYTHING (even Excel "databases")
+
+## Priority Implementation Order
+1. **Database schema** with dynamic fields
+2. **Auth system** with JWT
+3. **Project/Permit API** with AI
+4. **Migration engine** prototype
+5. **Basic UI** for demo
 
 *Let's build the permit system that doesn't suck!*
