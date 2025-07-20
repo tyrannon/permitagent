@@ -268,3 +268,7 @@ claude-prompter suggest -t "LLM router for multi-model AI system" --code -l type
 11. System must handle dynamic fields for council demands
 12. Everything must be undoable (workflow history)
 13. AI is at the CORE, not bolted on
+14. Migration engine can eat ANY competitor's database
+15. One-click transfer from Accela/Tyler/etc
+16. Zero-downtime migrations with parallel run
+17. AI cleans and enhances data during migration
