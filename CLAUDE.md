@@ -238,6 +238,11 @@ claude-prompter suggest -t "LLM router for multi-model AI system" --code -l type
 - Council demands new fields → Dynamic field creation
 - Scattered records → Everything linked to projects
 - Manual inspector routing → AI optimization by stops
+- "How long does this take?" → Real-time analytics per user/step
+- "When will I get my permit?" → AI predictions with visual timeline
+- "What happens next?" → Picture diagrams for every workflow
+- Wrong fee schedules → Automatic fee versioning with retroactive fixes
+- Nobody understands the process → Visual guides for everyone
 
 ### Technical Decisions
 - **Database**: PostgreSQL with Prisma ORM

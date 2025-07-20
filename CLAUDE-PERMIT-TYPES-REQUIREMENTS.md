@@ -579,6 +579,131 @@ interface FeeManagement {
 }
 ```
 
+## Process Visibility and Time Tracking
+
+### The "When Will I Get My Permit?" Engine
+```typescript
+interface PermitTimeline {
+  // Real-time predictions
+  prediction: {
+    estimatedCompletion: Date;
+    confidence: number;
+    factors: string[]; // "Waiting on fire review", "2 permits ahead"
+    visualTimeline: TimelineGraphic; // Pretty pictures!
+  };
+  
+  // Historical analytics
+  averages: {
+    byPermitType: Map<PermitType, Duration>;
+    byDepartment: Map<Department, Duration>;
+    byStaff: Map<User, Duration>;
+    byComplexity: Map<Complexity, Duration>;
+  };
+  
+  // Bottleneck identification
+  delays: {
+    currentBottleneck: WorkflowStep;
+    averageDelayAtStep: Duration;
+    suggestedFix: string; // "Assign more staff to plan review"
+  };
+}
+```
+
+### Visual Workflow for Idiots (Everyone)
+```typescript
+interface VisualWorkflowEngine {
+  // Picture-based workflows
+  diagrams: {
+    style: 'infographic' | 'flowchart' | 'comic-strip';
+    includeEstimates: boolean; // "2-3 days here"
+    currentPosition: HighlightStyle; // Big red arrow: "YOU ARE HERE"
+    nextSteps: StepPreview[]; // What's coming with pictures
+  };
+  
+  // For different audiences
+  versions: {
+    citizen: SimplifiedDiagram; // Just the basics
+    staff: DetailedDiagram; // All steps visible
+    management: AnalyticsDiagram; // With metrics
+  };
+  
+  // Interactive features
+  interactive: {
+    clickForDetails: boolean;
+    hoverForTime: boolean; // "This usually takes 3 days"
+    zoomToStep: boolean;
+  };
+}
+```
+
+### Automatic Fee Schedule Management
+```typescript
+interface SmartFeeSchedule {
+  // Version control for fees
+  versioning: {
+    current: FeeSchedule;
+    history: FeeScheduleVersion[];
+    effectiveDate: Date;
+    autoApply: boolean; // New permits get new fees
+  };
+  
+  // Retroactive fixes (the nightmare scenario)
+  retroactiveFix: {
+    identify: (oldSchedule: FeeSchedule, newSchedule: FeeSchedule) => AffectedPermits[];
+    calculate: (permit: Permit) => FeeAdjustment;
+    apply: (adjustment: FeeAdjustment) => {
+      notification: CustomerNotification;
+      refund?: RefundProcess;
+      invoice?: AdditionalInvoice;
+    };
+    bulkProcess: (permits: Permit[]) => BulkResult;
+  };
+  
+  // Prevent wrong fees
+  validation: {
+    checkFeeSchedule: (permit: Permit) => boolean;
+    suggestCorrectFees: (permit: Permit) => Fee[];
+    flagDiscrepancies: () => FeeAlert[];
+  };
+}
+```
+
+### Time Analytics Dashboard
+```typescript
+interface TimeAnalytics {
+  // Per-user metrics
+  userMetrics: {
+    internal: {
+      averageReviewTime: Duration;
+      permitsPerDay: number;
+      bottleneckFrequency: number;
+      efficiency: EfficiencyScore;
+    };
+    external: {
+      averageSubmissionTime: Duration;
+      resubmissionRate: number;
+      completionRate: number;
+    };
+  };
+  
+  // Process metrics
+  processMetrics: {
+    endToEnd: Duration;
+    byPhase: Map<Phase, Duration>;
+    variability: StandardDeviation;
+    trends: TrendAnalysis;
+  };
+  
+  // Predictive analytics
+  predictions: {
+    expectedCompletion: (permit: Permit) => Date;
+    confidenceInterval: [Date, Date];
+    assumptions: string[];
+    recommendations: Optimization[];
+  };
+}
+```
+
 ## Updated Bottom Line
 
 This system handles:
@@ -595,6 +720,11 @@ This system handles:
 - ✅ Budget projections that make sense
 - ✅ Invoice/receipt management that works
 - ✅ Dynamic everything
+- ✅ "When will I get my permit?" predictions
+- ✅ Visual workflows for people who don't read
+- ✅ Time tracking for every user and step
+- ✅ Automatic fee schedule versioning
+- ✅ Retroactive fee fixes without tears
 
 No more "we can't do that" or "that will take 6 months" or "the system doesn't support it."
 
